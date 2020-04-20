@@ -1,11 +1,15 @@
 print("WELCOME IN THE GAME OF HANGMAN")
 print("THE PINK CITY ???")
 word="JAIPUR"
+accept="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+accept=list(accept)
 word=list(word)
 gword="_"*len(word)
 gword=list(gword)
 c=0
 ip=input("ENTER YOUR GUESS LETTER  ")
+if(ip not in accept):
+        print("!! IT IS NOT A LETTER YOU ARE MISSING YOUR CHANCES OF WINNING GUESS WITH A LETTER !!")
 while True:
     if ip.upper() in word:
         index=word.index(ip.upper())
